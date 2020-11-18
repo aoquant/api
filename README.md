@@ -9,8 +9,12 @@ import requests
 import pandas as pd
 import json
 
+#USDT增发数据
 r = requests.get('https://api.aoquant.com/usdt')
+
+#灰度基金持仓数据
 # r = requests.get('https://api.aoquant.com/grayscale')
+
 r= json.loads(r.text)
 
 df = pd.DataFrame(r['result'])
